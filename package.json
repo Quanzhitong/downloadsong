@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "高质量网易云音乐下载",
   "main": "index.js",
+  "bin": {
+    "downloadSong": "bin/downloadSong.js",
+    "dls": "bin/downloadSong.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
