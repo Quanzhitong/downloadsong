@@ -1,0 +1,30 @@
+{
+  "name": "downloadsong",
+  "version": "1.0.0",
+  "description": "高质量网易云音乐下载",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Quanzhitong"
+  },
+  "keywords": [
+    "wy",
+    "网易云音乐",
+    "网易云",
+    "音乐"
+  ],
+  "author": "Qzt",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "cli-progress": "^3.11.1",
+    "colorette": "^2.0.17",
+    "commander": "^9.3.0",
+    "request": "^2.88.2",
+    "single-line-log": "^1.1.2",
+    "update-notifier": "^5.1.0"
+  }
+}
