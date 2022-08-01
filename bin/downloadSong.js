@@ -3,4 +3,4 @@
 
 process.title = 'wymusic'
 
-require('../lib')()
+require('../src')()

@@ -1,6 +1,6 @@
 {
   "name": "downloadsong",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "高质量网易云音乐下载",
   "main": "index.js",
   "bin": {
@@ -8,7 +8,8 @@
     "dls": "bin/downloadSong.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -30,5 +31,9 @@
     "request": "^2.88.2",
     "single-line-log": "^1.1.2",
     "update-notifier": "^5.1.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
   }
 }

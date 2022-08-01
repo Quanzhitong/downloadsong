@@ -1,5 +1,5 @@
 const http = require('http');
-const download = require('../test/');
+const download = require('../test');
 const commander = require('./commander');
 const querySongs = require('./querySongs');
 const chooseSong = require('./chooseSong');
