@@ -1,19 +1,11 @@
-const got = require('got')
-const colors = require('colorette')
+import got from 'got';
+import { green, red } from 'colorette';
 
-module.exports = async (text) => {
+const querySongs = async (text: string) => {
   if (text === '') {
-    console.error(colors.green(`请输入歌曲名称或歌手名字`))
+    console.error(green(`请输入歌曲名称或歌手名字`))
     process.exit(1)
   }
-
-// 咪咕
-//   const searchUrl = `https://pd.musicapp.migu.cn/MIGUM3.0/v1.0/content/search_all.do?&text=${encodeURI(text)}&pageSize=1&searchSwitch={song:1}`
-
-// 酷我
-// const searchUrl = `https://search.kuwo.cn/r.s?client=kt&all=${encodeURIComponent(text)}&pn=${
-//     Number(pageNum) - 1
-//   }&rn=10&vipver=1&ft=music&encoding=utf8&rformat=json&mobi=1`
 
 // 网易
 const searchUrl = `https://music.163.com/api/search/get/web?s=${encodeURIComponent(
@@ -29,7 +21,7 @@ const searchUrl = `https://music.163.com/api/search/get/web?s=${encodeURICompone
 //   fee 为 1 或 8 的歌曲均可单独购买 2 元单曲
 
   const { result: {songs = [], songCount} } = JSON.parse(body);
-  const searchSongs = songs.filter((item) => item.fee !== 1);
+  const searchSongs = songs.filter((item: { fee: number }) => item.fee !== 1);
   for (const song of searchSongs) {
     const detailUrl = `https://music.163.com/api/song/enhance/player/url?id=${song.id}&ids=[${song.id}]&br=3200000`
     const { body } = await got(detailUrl);
@@ -39,8 +31,10 @@ const searchUrl = `https://music.163.com/api/search/get/web?s=${encodeURICompone
   }
   
   if (!songs) {
-    console.error(colors.red(`没搜索到 ${text} 的相关结果`))
+    console.error(red(`没搜索到 ${text} 的相关结果`))
     process.exit(1)
   }
   return searchSongs
 }
+
+export default querySongs;

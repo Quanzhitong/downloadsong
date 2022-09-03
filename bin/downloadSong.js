@@ -1,6 +1,4 @@
 #!/usr/bin/env node
-'use strict'
-
-process.title = 'wymusic'
-
-require('../src')()
+'use strict';
+import downloadSong from '../dist/index.js';
+downloadSong()

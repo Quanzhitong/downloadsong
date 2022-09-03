@@ -1,7 +1,8 @@
-const prompts = require('prompts')
-const names = require('./names')
+import prompts from 'prompts'
+import { songType } from '../type/songsType';
+import names from './names'
 
-module.exports = async (songs) =>
+const chooseSong = async (songs: songType[] ) =>
   await prompts([
     {
       type: 'select',
@@ -10,3 +11,5 @@ module.exports = async (songs) =>
       choices: songs.map((s, index) => names(s, index)),
     },
   ])
+
+  export default chooseSong;

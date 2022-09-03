@@ -3,7 +3,6 @@ node_modules/
 .vscode/
 .DS_Store
 .doc
-.bin/
 .music/
 .src/
 .test/
