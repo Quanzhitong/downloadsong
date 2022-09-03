@@ -1,6 +1,6 @@
 {
   "name": "downloadsong",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "高质量网易云音乐下载",
   "main": "index.js",
   "bin": {
