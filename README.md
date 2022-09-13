@@ -6,7 +6,7 @@
   `npm i downloadsong`
 ### 使用
   * `downloadsong 许嵩 or dls 许嵩`
-  *  `dls 周杰伦` 
+  *  `dls 周杰伦` （默认使用酷我下载，可通过指定源，-s 'wangyi' 或者 -s 'kuwo'）
   <img width="478" alt="image" src="https://user-images.githubusercontent.com/41983846/189889485-202dc798-2e11-4df4-a535-e28bace9dc6e.png">
 
 ### 注意
