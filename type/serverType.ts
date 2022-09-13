@@ -1,0 +1,1 @@
+export type serverType = 'kuwo' | 'wangyi';

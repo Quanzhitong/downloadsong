@@ -1,7 +1,7 @@
 {
   "name": "downloadsong",
-  "version": "1.0.3",
-  "description": "高质量网易云音乐下载",
+  "version": "1.0.5",
+  "description": "音乐下载工具，目前支持酷我、网易云",
   "main": "index.js",
   "bin": {
     "downloadSong": "bin/downloadSong.js",

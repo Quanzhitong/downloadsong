@@ -7,7 +7,7 @@ const querySongs = async (text: string) => {
     process.exit(1)
   }
 
-// 网易
+// 网易云
 const searchUrl = `https://music.163.com/api/search/get/web?s=${encodeURIComponent(
     text
   )}&type=1&limit=20&offset=20`;

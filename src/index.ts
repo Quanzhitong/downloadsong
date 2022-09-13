@@ -1,7 +1,7 @@
-import download from './download';
+import download from '../util/downloadSong';
 import commanderCLI from './commander';
-import querySongs from './querySongs';
 import chooseSong from './chooseSong';
+import querySongs from '../util/querySongList';
 
 const downloadSong = async () => {
     const songs = await querySongs(commanderCLI);
