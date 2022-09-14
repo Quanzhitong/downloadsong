@@ -1,3 +1,4 @@
+import { serverType } from './serverType';
 export type artistsType = {
     id: number,
     name: string,
@@ -13,6 +14,7 @@ export type artistsType = {
 export interface songType {
     name: string,
     artists: artistsType,
-    id: number
+    id: number,
+    server: serverType
 }
 

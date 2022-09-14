@@ -24,7 +24,6 @@ const querySongList = async (cliArr: string[]) => {
         // 外“” 内'' 的json，不能使用JSON.parse
         const _body = (new Function("return " + body))();
         const { abslist } = _body;
-        const MUSICRID_MAP = abslist.map(item => item.MUSICRID);
         searchSongs = abslist.map((item) => {
             return {
                 id: item.DC_TARGETID,

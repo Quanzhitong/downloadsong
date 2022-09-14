@@ -9,7 +9,7 @@ import got from 'got'
 const download = async ({ name, id, server }: DownloadPropsType) => {
 
   let detailUrl = '';
-  
+  let url = '';
   if(server === 'kuwo') {
     detailUrl = `https://www.kuwo.cn/api/v1/www/music/playUrl?mid=${id}&type=1`;
   } else {
@@ -17,9 +17,13 @@ const download = async ({ name, id, server }: DownloadPropsType) => {
   }
 
   const { body } = await got(detailUrl);
-
-  const { url } = server === 'kuwo' ? JSON.parse(body).data : JSON.parse(body).data[0];
-  
+  if( server === 'kuwo') {
+    const _body = (new Function("return " + body))();
+    url = _body.data.url;
+  } else {
+    const _data = JSON.parse(body).data[0];
+    url = _data.url
+  }
   const progress = new cliProgress.SingleBar({
     format: '下载进度 | {bar} | {percentage}%',
     barCompleteChar: '\u2588',

@@ -1,6 +1,6 @@
 {
   "name": "downloadsong",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "音乐下载工具，目前支持酷我、网易云",
   "main": "index.js",
   "bin": {
@@ -17,9 +17,8 @@
   },
   "type": "module",
   "keywords": [
-    "wy",
-    "网易云音乐",
     "网易云",
+    "酷我",
     "音乐"
   ],
   "author": "Qzt",
